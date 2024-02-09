@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+:root{
+  --main-background: #f0f0f0;
+  --main-dark-background: #1c1c1e;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.outer-wrapper{
+  height: 100vw;
+  background-color: black;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  width: 100vw;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+.outer-wrapper::-webkit-scrollbar{
+  overflow: hidden;
+}
+.navbar{
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 2rem;
+}
+.wrapper{
+  height: 100vh;
+  width: 300vw;
+  display: flex;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-background);
+  transition: 0.8s ease-in-out;
+}
+
+.first{
+  height: 100vh;
+  width: 100vw;
+}
+.second{
+  width: 130vw;
+  height: 100%;
+}
+.third{
+  width: 70vw;
+}
+.fourth{
+  /* width: 100vw; */
+}
+#dark{
+  transition: 0.8s ease-in-out;
+  background-color: var(--main-dark-background);
+}
+@media only screen and (max-width: 1000px){
+  *{
+    overflow-y:visible;
+  }
+  .outer-wrapper{
+    transform: none;
+    height: 100%;
+    overflow: hidden;
+  }
+  .wrapper{
+    transform: none;
+    width: 100vw;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  .second{
+    width: 100vw;
+  }
+  .third{
+    width: 100vw;
+    height: 70vh;
+  }
+}

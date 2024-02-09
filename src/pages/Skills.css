@@ -1,0 +1,125 @@
+.skills-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.icon-name {
+  font-size: 1.3rem;
+}
+
+.skill-grid {
+  padding: 2rem 2rem;
+  z-index: 2;
+  background-color: #1d2f3d;
+  color: white;
+  width: 20vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  justify-items: space-evenly;
+}
+.skill-heading {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-grid span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#rest-api {
+  grid-column: 1/3;
+}
+.text-about-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+}
+
+/* icons */
+
+.icons {
+  font-size: 2.5rem;
+}
+
+.react-icon {
+  color: #61dbfb;
+}
+
+.mongodb-icon {
+  color: #4db33d;
+}
+
+.node-icon {
+  color: #68a063;
+}
+.js-icon {
+  color: #f0db4f;
+}
+.sass-icon {
+  color: #c69;
+}
+.github-icon {
+  color: #4078c0;
+}
+
+.git-icon {
+  color: #f1502f;
+}
+.api-icon {
+  color: #ffb400;
+}
+
+@media only screen and (max-width: 1650px) {
+  .skill-heading {
+    font-size: 1.4rem;
+  }
+  .icon-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .icon-name {
+    font-size: 0.8rem;
+  }
+  .skill-grid {
+    padding: 2rem 1rem;
+    column-gap: 0;
+  }
+}
+
+@media only screen and (max-width: 1149px) {
+  .skill-grid {
+    width: 30vw;
+  }
+  .skill-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .skills-container {
+    flex-direction: column;
+  }
+  .skill-grid {
+    width: 100vw;
+    padding: 2rem 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 25px;
+  }
+  .skill-heading {
+    grid-column: 1/4;
+  }
+  #rest-api {
+    grid-column: auto;
+  }
+}
